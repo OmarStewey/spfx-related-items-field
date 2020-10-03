@@ -20,7 +20,7 @@ SharePoint Field Customizer Extension to display items in a separate list relate
 
 Solution|Author(s)
 --------|---------
-spfx-related-items-field | Omar Stewart https://stackoverflow.com/cv/omarstewey
+spfx-related-items-field | Omar Stewart https://twitter.com/omarstewey
 
 ## Version history
 
