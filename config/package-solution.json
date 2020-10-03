@@ -15,8 +15,8 @@
     },
     "features": [
       {
-        "title": "Application Extension - Deployment of custom action.",
-        "description": "Deploys a custom action with ClientSideComponentId association",
+        "title": "Related Items Field Customizer Extension.",
+        "description": "Deploys a custom action with ClientSideComponentId association for the Related Items Field Component",
         "id": "f1d0395a-337b-4139-a0dc-a99970c138cc",
         "version": "1.0.0.0",
         "assets": {

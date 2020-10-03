@@ -16,7 +16,6 @@ SharePoint Field Customizer Extension to display items in a separate list relate
 - [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
 
 
-
 ## Solution
 
 Solution|Author(s)

@@ -6,16 +6,12 @@
     "default": {
       "pageUrl": "https://contoso.sharepoint.com/Lists/Orders/AllItems.aspx",
       "fieldCustomizers": {
-        "OrderItems": {
+        "InternalFieldName": {
           "id": "94b3b827-015d-47ca-aaff-f8c7e6d1fd86",
           "properties": {
             "targetListName": "Order Items",
             "targetListFilterFieldName": "OrderId",
-            "targetListDisplayFieldName": "Title",
-            "buttonLabelText": "View Order Items",
-            "additionalFilterQuery": "hidden eq false",
-            "showAuthor": true,
-            "showCreatedDate": true
+            "buttonLabelText": "View Order Items"
           }
         }
       }
@@ -26,7 +22,9 @@
         "InternalFieldName": {
           "id": "94b3b827-015d-47ca-aaff-f8c7e6d1fd86",
           "properties": {
-            "sampleText": "Value"
+            "targetListName": "Order Items",
+            "targetListFilterFieldName": "OrderId",
+            "buttonLabelText": "View Order Items"
           }
         }
       }

@@ -9,18 +9,17 @@ import {
 } from '@microsoft/sp-listview-extensibility';
 
 import * as strings from 'RelatedItemsFieldCustomizerFieldCustomizerStrings';
-import RelatedItemsFieldCustomizer, { IRelatedItemsFieldCustomizerProps } from './components/RelatedItemsFieldCustomizer';
+import RelatedItemsFieldCustomizer, { IRelatedItemsFieldCustomizerProps } from './components/RelatedItemsField/RelatedItemsFieldCustomizer';
 
-/**
- * If your field customizer uses the ClientSideComponentProperties JSON input,
- * it will be deserialized into the BaseExtension.properties object.
- * You can define an interface to describe it.
- */
 export interface IRelatedItemsFieldCustomizerFieldCustomizerProperties {
   
   targetListName: string;
   targetListFilterFieldName: string;
+  targetListDisplayFieldName: string;
   buttonLabelText: string;
+  additionalFilterQuery: string;
+  showAuthor: boolean;
+  showCreatedDate: true;
 
 }
 
@@ -31,8 +30,7 @@ export default class RelatedItemsFieldCustomizerFieldCustomizer
 
   @override
   public onInit(): Promise<void> {
-    // Add your custom initialization to this method.  The framework will wait
-    // for the returned promise to resolve before firing any BaseFieldCustomizer events.
+    
     Log.info(LOG_SOURCE, 'Activated RelatedItemsFieldCustomizerFieldCustomizer with properties:');
     Log.info(LOG_SOURCE, JSON.stringify(this.properties, undefined, 2));
     Log.info(LOG_SOURCE, `The following string should be equal: "RelatedItemsFieldCustomizerFieldCustomizer" and "${strings.Title}"`);
@@ -45,9 +43,13 @@ export default class RelatedItemsFieldCustomizerFieldCustomizer
     const relatedItemsFieldCustomizer: React.ReactElement<{}> =
       React.createElement(RelatedItemsFieldCustomizer, { 
         targetListName: this.properties.targetListName,
-        targetListFilterFieldName: this.properties.targetListFilterFieldName,
+        filterFieldName: this.properties.targetListFilterFieldName,
+        displayFieldName: this.properties.targetListDisplayFieldName,
         currentItemId: event.listItem.getValueByName("ID"),
-        buttonText: this.properties.buttonLabelText
+        buttonText: this.properties.buttonLabelText,
+        additionalFilter: this.properties.additionalFilterQuery,
+        showAuthor: this.properties.showAuthor,
+        showCreatedDate: this.properties.showCreatedDate
        } as IRelatedItemsFieldCustomizerProps);
 
     ReactDOM.render(relatedItemsFieldCustomizer, event.domElement);
