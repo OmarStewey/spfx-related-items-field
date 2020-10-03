@@ -4,7 +4,7 @@
 
 SharePoint Field Customizer Extension to display items in a separate list related to the currently selected item.
 
-[picture of the solution in action, if possible]
+<img src="./RelatedItemsFieldPreview.gif" alt="Related Items Field" />
 
 ## Used SharePoint Framework Version
 
