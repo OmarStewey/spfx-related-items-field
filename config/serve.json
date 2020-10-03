@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://osdevsite.sharepoint.com/sites/testsite/Lists/Orders/AllItems.aspx",
+      "fieldCustomizers": {
+        "OrderItems": {
+          "id": "94b3b827-015d-47ca-aaff-f8c7e6d1fd86",
+          "properties": {
+            "targetListName": "Order Items",
+            "targetListFilterFieldName": "OrderId",
+            "buttonLabelText": "View Order Items"
+          }
+        }
+      }
+    },
+    "relatedItemsFieldCustomizer": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "fieldCustomizers": {
+        "InternalFieldName": {
+          "id": "94b3b827-015d-47ca-aaff-f8c7e6d1fd86",
+          "properties": {
+            "sampleText": "Value"
+          }
+        }
+      }
+    }
+  }
+}
