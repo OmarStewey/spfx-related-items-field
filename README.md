@@ -21,14 +21,13 @@ SharePoint Field Customizer Extension to display items in a separate list relate
 
 Solution|Author(s)
 --------|---------
-folder name | Author details (name, company, twitter alias with link)
+spfx-related-items-field | Omar Stewart https://stackoverflow.com/cv/omarstewey
 
 ## Version history
 
 Version|Date|Comments
 -------|----|--------
-1.1|March 10, 2021|Update comment
-1.0|January 29, 2021|Initial release
+1.0|October 01, 2020|Initial release
 
 ## Disclaimer
 
@@ -45,11 +44,8 @@ Version|Date|Comments
   - **npm install**
   - **gulp serve**
 
-> Include any additional steps as needed.
 
 ## Features
-
-Description of the extension that expands upon high-level summary above.
 
 This extension illustrates the following concepts:
 
